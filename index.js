@@ -3,12 +3,12 @@ request = require('request');
 module.exports = function() {
     return function proxy(req, res) {
         require('./getIp')(function(ip) {
-            // 根据外网 ip 切换调用开发、测试环境api
+            // 根据外网 ip 切换调用内网、外网环境api
             var config = require('./config.json');
             // 转发逻辑
             agent = req.get('User-Agent');
             options = {
-                'url': config[(ip == '112.64.124.86' ? 'dev' : 'test')] + req.baseUrl + req.path,
+                'url': config[(ip == config.ip ? 'intranet' : 'extranet')] + req.baseUrl + req.path,
                 'method': req.method,
                 'qs': req.query,
                 'gzip': true,

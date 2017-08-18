@@ -18,7 +18,7 @@ module.exports = function(callback) {
                 eval(body)
                 ip = returnCitySN.cip
                 cache.put('ip', ip)
-                console.log(`>> 外网ip：${cache.get('ip')}      API：${ip == '112.64.124.86' ? '开发环境' : '测试环境，请检查是否已连接 VPN'}`)
+                console.log(`>> 外网ip：${cache.get('ip')}      API：${ip == '112.64.124.86' ? '内网/开发环境' : '外网/测试环境'}`)
             })
         }).on('error', function() {
             console.log('抓取 IP 出错')
