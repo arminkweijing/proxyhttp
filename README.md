@@ -2,10 +2,12 @@
 
 node 接口转发中间件（代理）
 
+> 安装：
 ```bash
 npm install -S -D
 ```
 
+> 使用：
 ```js
 var app = express()
 
