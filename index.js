@@ -1,5 +1,5 @@
 request = require('request');
-var config = require('./config.json');
+var config = require('./../../proxy_conf.json');
 
 // 接口转发
 function transfer(ip, req, res) {

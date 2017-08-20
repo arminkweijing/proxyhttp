@@ -2,6 +2,10 @@
 
 node 接口转发中间件（代理）
 
+```bash
+npm install -S -D
+```
+
 ```js
 var app = express()
 
@@ -14,7 +18,7 @@ app.use(bodyParser.json())
 app.use("/api", require("proxyhttp")())
 ```
 
-配置 `config.json`
+项目根目录配置 `proxy_conf.json`
 ```js
 {
     // 内网对应的公网IP(若不设置，默认外网服务)
