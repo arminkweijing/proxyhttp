@@ -16,7 +16,8 @@ module.exports = function(obj) {
             'gzip': true,
             'headers': {
                 'User-Agent': agent,
-                'X-Forwarded-For': req.ip
+                'X-Forwarded-For': req.ip,
+                'cookie': req.headers.cookie
             }
         }
 
