@@ -1,6 +1,6 @@
 {
 	"name": "proxyhttp",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"description": "node 接口转发中间件（代理）",
 	"main": "index.js",
 	"scripts": {
