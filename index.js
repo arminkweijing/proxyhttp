@@ -10,7 +10,7 @@ module.exports = function(obj) {
         // 转发逻辑
         agent = req.get('User-Agent');
         options = {
-            'url': config[(ip == config.ip ? 'intranet' : 'extranet')] + req.baseUrl + req.path,
+            'url': config[(ip == config.ip ? 'intranet' : 'extranet')] + req.path,
             'method': req.method,
             'qs': req.query,
             'gzip': true,
