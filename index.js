@@ -1,6 +1,5 @@
 request = require('request');
 
-
 module.exports = function(obj) {
     var config = obj
 
