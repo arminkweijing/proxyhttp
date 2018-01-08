@@ -1,4 +1,4 @@
-request = require('request');
+var request = require('request');
 
 module.exports = function(obj) {
     var config = obj
